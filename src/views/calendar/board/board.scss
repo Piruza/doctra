@@ -1,0 +1,138 @@
+.boardWrapper{
+    padding: 15px;
+    width: 70%;
+
+    .weekHeader{
+        display: flex;
+        margin-bottom: 1px;
+        height: 50px;
+
+        .weekHeaderItem{
+            flex: 0 0 164px;
+            background-color: #E8F3F6;
+            border-top: 1px solid #707070;
+            border-left: 1px solid #707070;
+            border-bottom: 1px solid #707070;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:last-child{
+                border-right: 1px solid #707070;
+            }
+
+            &.empty{
+                border: none;
+                background-color: #fff;
+                flex:0 0  101px !important;
+            }
+
+            span{
+                font-weight: bold;
+                font-size: 22px;
+                color: rgba(0,0,0, .7);
+            }
+        }
+    }
+
+    .weekBody{
+        display: flex;
+        align-items: flex-start;
+
+        .hoursSlot{
+            background-color: #E8F3F6;
+            border-top: 1px solid #707070;
+            border-left: 1px solid #707070;
+            border-right: 1px solid #707070;
+            height: 75px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+            &:last-child{
+                border-bottom: 1px solid #707070;
+            }
+
+            span{
+                font-weight: bold;
+                    color: rgba(0,0,0, .7);
+                    font-size: 22px;
+            }
+        }
+        
+    }
+
+}
+
+.boardSlots{
+    width: calc(100% - 102px);
+    height: 100%;
+    display: flex;
+
+    .slotWrapper{
+        width: 165px;
+    }
+
+    .boardSlot{
+        flex: 0 0 164px;
+        border-right: 1px solid #707070;
+        border-top: 1px solid #707070;
+        height: 75px;
+        position: relative;
+
+        &:last-child{
+            border-right: 1px solid #707070;
+            border-bottom: 1px solid #707070;
+        }
+
+    }
+}
+
+.monthlyBoardSlots{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    .MonthlyBoardSlot{
+        flex: 0 0 13%;
+        margin: 0 1% 15px 0;
+        height: 140px;
+        border: 1px solid #707070;
+        position: relative;
+    }
+}
+
+.boardSlot, .MonthlyBoardSlot{
+    .slotStatus{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+    }
+
+
+    span{
+        margin-left: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 150px;
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+    }
+        
+    span.driver{
+        color: #0997AE;
+        padding-top: 5px;
+    }
+
+    span.phlebo{
+        color: #2A5369;
+    }
+
+}

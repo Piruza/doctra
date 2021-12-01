@@ -1,0 +1,144 @@
+.filterWrapper{
+    height: 200px;
+    padding: 15px;
+}
+
+.filterSelection{
+    display: flex;
+    align-items: center;
+
+    p{
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.filterDates{
+    display: flex;
+    align-items: center;
+
+    p{
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .dateInput{
+        margin: 0 15px;
+        position: relative;
+
+        input{
+            text-align: center;
+            height: 32px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+    }
+
+    .dateBtn{
+        width: 26px;
+        height: 34px;
+        border: 1px solid rgba(0,0,0, .7);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .dateBtnPrev{
+        img{
+            transform: rotate(180deg);
+        }
+    }
+
+    .filterRangeView{
+        display: flex;
+        margin-left: 30px;
+        align-items: center;
+        height: 36px;
+        border-radius: 3px;
+        overflow: hidden;
+
+        div{
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #CCCCCC;
+            box-shadow:inset 0px 0px 5px 3px rgba(0,0,0, .1);
+            height: 100%;
+            cursor: pointer;
+            
+            &.active{
+                background-color: #fff;
+            }
+
+            span{
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+.filterButtons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    & > div{
+        display: flex;
+        align-items: center;
+    }
+
+    .do{
+        div{
+            border: 1px solid #918F8F;
+            border-radius: 5px;
+            width: 40px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+
+            img{
+                max-width: 22px;
+            }
+        }
+    }
+
+    .filterActionButtons{
+        margin-left: 10px;
+
+        ._btn{
+            width: 170px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            border: 1px solid #918F8F;
+            margin-right: 20px;
+            cursor: pointer;
+            box-shadow: inset 0 0 4px 3px rgba(132, 127, 127, .1);
+
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.calendar{
+    z-index: 999;
+    position: absolute;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0, .1);
+    box-shadow: 1px 9px 10px 3px rgb(0 0 0 / 20%);
+    min-width: 350px;
+    top: 0;
+}
